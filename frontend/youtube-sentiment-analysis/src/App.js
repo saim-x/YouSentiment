@@ -158,8 +158,10 @@ const App = () => {
   const [selectedVideoId, setSelectedVideoId] = useState(null);
   const [error, setError] = useState('');
   const [showDetails, setShowDetails] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fetchChannelData = async () => {
+    setLoading(true); // Set loading to true when starting to fetch data
     try {
       const response = await axios.post('http://localhost:5000/fetch-channel', { channel_url: channelUrl });
       setChannelData(response.data);
@@ -167,6 +169,8 @@ const App = () => {
     } catch (err) {
       setError('Oops! Something went wrong. Couldn’t fetch channel data. 😔');
       console.error(err);
+    } finally {
+      setLoading(false); // Set loading to false once data is fetched or if there is an error
     }
   };
 
@@ -240,6 +244,7 @@ const App = () => {
         />
         <button onClick={fetchChannelData}>Fetch Channel Data</button>
 
+        {loading && <div className="spinner"></div>} {/* Show spinner while loading */}
         {error && <p className="error">{error}</p>}  {/* Display error message */}
 
         {channelData && (
