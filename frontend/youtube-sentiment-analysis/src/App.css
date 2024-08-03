@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+input {
+  margin: 10px;
+  padding: 5px;
+  width: 300px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+img {
+  margin: 20px;
+  border-radius: 50%;
+}
+
+h1, h2, p {
+  margin: 10px;
+}
