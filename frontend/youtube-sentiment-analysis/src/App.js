@@ -150,7 +150,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import picture from './picture.jpg'; // Import the image
+import picture from './picture2.jpg'; // Import the image
 
 const App = () => {
   const [channelUrl, setChannelUrl] = useState('');
@@ -237,6 +237,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>YouTube Channel Sentiment Analysis</h1> {/* Add title */}
         <input
           type="text"
           value={channelUrl}
@@ -250,7 +251,7 @@ const App = () => {
 
         {channelData && (
           <div>
-            <h1>{channelData.items[0]?.snippet?.title}</h1>
+            <h2>{channelData.items[0]?.snippet?.title}</h2>
             <img src={channelData.items[0]?.snippet?.thumbnails?.default?.url} alt="Channel Profile" />
             <p>Subscribers: {formatNumber(channelData.items[0]?.statistics?.subscriberCount)}</p>
             <p>Total Views: {formatNumber(channelData.items[0]?.statistics?.viewCount)}</p>
