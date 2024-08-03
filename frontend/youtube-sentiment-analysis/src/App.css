@@ -179,10 +179,66 @@ h2 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .error {
   color: #ff4d4d;
+}
+
+/* devloper card css */
+.developer-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px auto;
+  margin-top: 100px;
+  max-width: 400px;
+  text-align: center;
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.developer-card img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: border 0.3s ease, border-radius 0.3s ease;
+  padding: 7px;
+}
+
+.developer-card img:hover {
+  border: 2px solid #007bff;
+  border-radius: 10%;
+}
+
+
+
+.developer-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.developer-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.developer-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.developer-card a:hover {
+  text-decoration: underline;
 }

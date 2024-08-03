@@ -150,6 +150,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import picture from './picture.jpg'; // Import the image
 
 const App = () => {
   const [channelUrl, setChannelUrl] = useState('');
@@ -291,6 +292,14 @@ const App = () => {
         )}
 
         {sentiment['channel'] && !showDetails && getSentimentDescription(sentiment['channel'].polarity, sentiment['channel'].subjectivity)}
+
+        <div className="developer-card">
+          <img src={picture} alt="Developer" />
+          <h3>Muhammad Saim</h3>
+          <p>About: Web & App Developer and Designer.</p>
+          <a href="https://www.linkedin.com/in/contactsaim" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        </div>
+        
       </header>
     </div>
   );
